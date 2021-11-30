@@ -287,3 +287,29 @@ img {
 .works-box .works-text p {
     font-weight: 500;
 }
+/* Case Studies */
+.case-studies-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.case-studies-box h4 span {
+    color: #23ce6b;
+    margin-right: 5px;
+    border-bottom: 2px solid #23ce6b;
+}
+.case-studies-box a {
+    color: #3f88c5;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.case-studies-box a svg {
+    width: 16px;
+    margin-left: 5px;
+    transition: .3s ease;
+}
+.case-studies-box a:hover svg {
+    margin-left: 12px;
+}
