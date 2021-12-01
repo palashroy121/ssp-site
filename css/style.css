@@ -313,3 +313,129 @@ img {
 .case-studies-box a:hover svg {
     margin-left: 12px;
 }
+/* Pricing */
+.pricing-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+.pricing-title img {
+    width: 65px;
+    margin-right: 15px;
+}
+.pricing-box {
+    position: relative;
+}
+.pricing-box-text::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    background-image: url(../images/check-solid.svg);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+}
+.pricing-box-text {
+    margin-left: 25px;
+}
+.pricing-box-text h4 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.pricing-box-text p {
+    font-size: 14px;
+}
+
+/* Questions Area */
+.questions-area {
+    background-color: #F8F6F6;
+}
+.questions-item {
+    border-radius: 4px;
+    background-color: #fff;
+}
+.questions-header {
+    padding: 1.25em;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: color .29s ease-in-out 0s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questions-header .questions-header-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+.questions-header:hover .questions-header-text, .questions-header:hover .fa-chevron-right {
+    color: #e22d1b;
+}
+.questions-content {
+    border-top: 1px solid #f7f2ef;
+    transition: display .29s ease-in-out 0s;
+    padding: 1.25em;
+}
+.questions-content-text h5 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.questions-content-text a {
+    color: #e22d1b;
+    text-decoration: none;
+}
+.questions-content-text a:hover {
+    color: #b23733;
+    text-decoration: underline;
+}
+
+/* Message */
+.message-area {
+    background-color: #e22d1b;
+}
+.section-title-white h2 {
+    color: #fff;
+}
+.message-text h5 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.message-text p {
+    color: #fff;
+}
+.message-btn {
+    color: #e22d1b;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 20px;
+    background-color: #fff;
+}
+.message-btn:hover {
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+.message-field label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+.message-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+.message-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
