@@ -121,8 +121,6 @@ img {
 
 /* Hero Area */
 .hero-area {
-    padding-top: 100px;
-    padding-bottom: 100px;
     background: #312929;
 }
 .hero-text h1 {
@@ -138,8 +136,6 @@ img {
 
 /* Promo Area */
 .promo-area {
-    padding-top: 100px;
-    padding-bottom: 100px;
     background-color: #F8F6F6;
 }
 .promo-box {
@@ -184,8 +180,6 @@ img {
 
 /* Service Area */
 .service-area {
-    padding-top: 100px;
-    padding-bottom: 100px;
     background-color: #FFFFFF;
 }
 .section-title span {
@@ -443,6 +437,7 @@ img {
     outline: none;
     font-size: 16px;
     margin-bottom: 16px;
+    background-color: transparent;
 }
 .message-field textarea {
     width: 100%;
@@ -451,4 +446,26 @@ img {
     outline: none;
     font-size: 16px;
     margin-bottom: 16px;
+    background-color: transparent;
+}
+
+/* Footer */
+.footer-area {
+    background-color: #312929;
+}
+.footer-social-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+.footer-social-icon a .fa {
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    margin: 0 5px;
 }
