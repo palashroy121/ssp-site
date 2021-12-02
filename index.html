@@ -608,8 +608,9 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <div class="questions-box">
-                        <div class="questions-item">
+                    <div class="questions-box ">
+                        
+                        <div class="questions-item mb-3"><!-- onclick="questionsToggle()" -->
                             <div class="questions-header">
                                 <div class="questions-header-text">
                                     Getting Started
@@ -631,6 +632,53 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="questions-item mb-3">
+                            <div class="questions-header">
+                                <div class="questions-header-text">
+                                    Pricing
+                                </div>
+                                <i class="fa fa-chevron-right"></i>
+                            </div>
+                            <div class="questions-content">
+                                <div class="questions-content-text mb-5">
+                                    <h5>Do you have a downloadable overview?</h5>
+                                    <p>Yes! Click here to download the pdf.</p>
+                                </div>
+                                <div class="questions-content-text mb-5">
+                                    <h5>Do you need access to my Google Ad Account?</h5>
+                                    <p>Yes, we do. We will just need your 10 digit account ID. Once we have your Google Acct. ID we will request access.</p>
+                                </div>
+                                <div class="questions-content-text mb-5">
+                                    <h5>What inputs are required to start an order?</h5>
+                                    <p>We created a PDF with the order inputs for PPC, check it out here.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="questions-item mb-3">
+                            <div class="questions-header">
+                                <div class="questions-header-text">
+                                    Results & Deliverables
+                                </div>
+                                <i class="fa fa-chevron-right"></i>
+                            </div>
+                            <div class="questions-content">
+                                <div class="questions-content-text mb-5">
+                                    <h5>Do you have a downloadable overview?</h5>
+                                    <p>Yes! Click here to download the pdf.</p>
+                                </div>
+                                <div class="questions-content-text mb-5">
+                                    <h5>Do you need access to my Google Ad Account?</h5>
+                                    <p>Yes, we do. We will just need your 10 digit account ID. Once we have your Google Acct. ID we will request access.</p>
+                                </div>
+                                <div class="questions-content-text mb-5">
+                                    <h5>What inputs are required to start an order?</h5>
+                                    <p>We created a PDF with the order inputs for PPC, check it out here.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -701,6 +749,15 @@
     <script src="js/jquery.meanmenu.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+        // var questionsItem = document.querySelector(".questions-item");
+        // function questionsToggle(){
+        //     questionsItem.classList.toggle("questions-open");
+        // }
+
+        $(".questions-header").on("click", function() {
+            $(this).parent().toggleClass("questions-open");
+            $(this).parent().siblings().removeClass("questions-open");
+        });
         // meanmenu
         $('#mobile-menu').meanmenu({
             meanMenuContainer: '.mobile-menu',
