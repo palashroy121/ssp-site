@@ -11,10 +11,127 @@
 /* medium devices */
 @media (max-width: 991.98px) {
 
+    .mean-container a.meanmenu-reveal {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .mean-container a.meanmenu-reveal span {
+        background: #fff none repeat scroll 0 0;
+    }
+
 }
 
 /* small devices */
 @media (max-width: 767.98px) {
+
+    .mean-container a.meanmenu-reveal {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .mean-container a.meanmenu-reveal span {
+        background: #fff none repeat scroll 0 0;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .promo-area {
+        padding-bottom: 20px;
+    }
+    .promo-box {
+        display: block;
+        padding: 20px 10px !important;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .promo-box-text {
+        margin-bottom: 20px;
+    }
+    .promo-button .promo-btn {
+        padding: 10px 30px;
+        margin-left: 0;
+    }
+    .promo-info {
+        margin-top: 15px !important;
+    }
+
+    .service-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .campaign-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .strategy-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .landing-page-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .expart-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .expart-area .campaign-left img {
+        margin-top: 20px;
+    }
+
+    .advertising-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .works-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .works-line::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        border-top: 0;
+        border-left: 2px solid #fff;
+        top: 35px;
+        left: -5px;
+        margin-left: 39px;
+    }
+    .works-box .works-number {
+        float: left;
+    }
+    .works-text {
+        padding-top: 12px;
+        padding-left: 60px;
+    }
+
+    .case-stadies-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .pricing-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .questions-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .message-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .message-area .section-title {
+        text-align: left !important;
+        margin-bottom: 25px !important;
+    }
 
 }
 
