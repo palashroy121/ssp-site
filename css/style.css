@@ -341,6 +341,89 @@ img {
     font-size: 14px;
 }
 
+.package-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.package-box {
+    border: 2px solid #f8f6f6;
+    background-color: #f8f6f6;
+    border-radius: 4px;
+    padding: 30px 20px 20px;
+    color: #645d5d;
+    transition: all .29s ease-in-out 0s;
+}
+.package-box:hover {
+    border: 2px solid #e22d1b;
+}
+.package-box-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.package-box-boby p {
+    font-size: 14px;
+}
+.package-include-head {
+    color: #2eaa71;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.package-include ul {
+    margin-left: -15px;
+}
+.package-include ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.package-calculate-box {
+    border: 2px solid #f8f6f6;
+    background-color: #f8f6f6;
+    border-radius: 4px;
+    padding: 30px 20px 20px;
+    color: #645d5d;
+    transition: all .29s ease-in-out 0s;
+}
+.package-calculate-head, .package-calculate-body {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #fff;
+}
+.package-calculate-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.package-calculate-head span, .package-calculate-body span {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.package-ad-spend span, .package-mgmt-fee span, .package-setup-fee span {
+    font-size: 14px;
+    font-weight: normal;
+}
+.ad-spend, .ad-spend span, .mgmt-fee, .mgmt-fee span, .setup-fee, .setup-fee span {
+    font-weight: 600;
+}
+.package-calculate-footer p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.package-calculate-footer {
+    margin-top: 15px;
+}
+.package-calculate-footer .total, .package-calculate-footer .total span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 /* Questions Area */
 .questions-area {
     background-color: #F8F6F6;
