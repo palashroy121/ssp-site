@@ -389,6 +389,7 @@ img {
     padding: 30px 20px 20px;
     color: #645d5d;
     transition: all .29s ease-in-out 0s;
+    margin-top: 53px;
 }
 .package-calculate-head, .package-calculate-body {
     margin-bottom: 15px;
@@ -422,6 +423,92 @@ img {
 .package-calculate-footer .total, .package-calculate-footer .total span {
     font-size: 16px;
     font-weight: 600;
+}
+
+.monthly-spend-text .monthly-spend-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+.monthly-spend-text p {
+    font-size: 14px;
+}
+.monthly-spend-text p strong {
+    color: #193b71;
+}
+.monthly-spend-amount {
+    margin-left: 30px;
+}
+.monthly-spend-amount small {
+    color: #9c9797;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.monthly-spend-amount span {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 5px;
+    position: relative;
+}
+.monthly-spend-amount span::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #23CE6B;
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+}
+
+.range {
+    margin-bottom: 20px;
+}
+.range input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: #F7F2EF;
+    height: 10px;
+    border-radius: 50px;
+}
+.range input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    height:24px;
+    width:24px;
+    border-radius:16px;
+    background:#e22d1b;
+    cursor:pointer;
+}
+.range input[type=range]::-moz-range-thumb{
+    -webkit-appearance:none;
+    height:24px;width:24px;
+    border-radius:16px;
+    background:#e22d1b;
+    cursor:pointer;
+    border:none
+}
+.range input[type=range]::-ms-thumb{
+    -webkit-appearance:none;
+    height:24px;
+    width:24px;
+    border-radius:16px;
+    background:#e22d1b;
+    cursor:pointer;
+    border:none
+}
+.range input[type=range]:hover::-webkit-slider-thumb{
+    background:#b23733;
+    box-shadow:0 3px 15px 1px rgba(0,0,0,.08)
+}
+.range input[type=range]:hover::-moz-range-thumb{
+    background:#b23733;
+    box-shadow:0 3px 15px 1px rgba(0,0,0,.08)
+}
+.range input[type=range]:hover::-ms-thumb{
+    background:#b23733;
+    box-shadow:0 3px 15px 1px rgba(0,0,0,.08)
+}
+.range-labels .range-label {
+    font-size: 12px;
 }
 
 /* Questions Area */
@@ -514,6 +601,7 @@ img {
     margin-bottom: 10px;
 }
 .message-field input {
+    color: #fff;
     width: 100%;
     padding: 10px;
     border: 1px solid #fff;
@@ -523,6 +611,7 @@ img {
     background-color: transparent;
 }
 .message-field textarea {
+    color: #fff;
     width: 100%;
     padding: 10px;
     border: 1px solid #fff;
