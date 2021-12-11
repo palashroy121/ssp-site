@@ -10,6 +10,12 @@
 
 /* medium devices */
 @media (max-width: 991.98px) {
+    .logo {
+        margin-top: 10px;
+    }
+    .mobile-menu {
+        margin-top: -7px;
+    }
 
     .mean-container a.meanmenu-reveal {
         border: 1px solid #fff;
@@ -23,6 +29,12 @@
 
 /* small devices */
 @media (max-width: 767.98px) {
+    .logo {
+        margin-top: 10px;
+    }
+    .mobile-menu {
+        margin-top: -7px;
+    }
 
     .mean-container a.meanmenu-reveal {
         border: 1px solid #fff;
@@ -30,6 +42,43 @@
     }
     .mean-container a.meanmenu-reveal span {
         background: #fff none repeat scroll 0 0;
+    }
+
+    /* Top Area */
+    .top-area {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .top-left-title {
+        font-size: 32px;
+    }
+    .top-left-price {
+        font-size: 46px;
+    }
+    .top-left-price sup {
+        font-size: 20px;
+        top: -25px;
+    }
+    .top-left-price span {
+        font-size: 24px;
+    }
+    .top-left-price span sup {
+        top: -10px;
+    }
+    .top-right img {
+        display: none;
+    }
+
+    .support-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .support-area .section-title {
+        margin-bottom: 0 !important;
+    }
+    .stead-area {
+        padding-top: 30px;
+        padding-bottom: 20px;
     }
 
     .hero-text h1 {
