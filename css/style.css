@@ -54,10 +54,24 @@ img {
 .header-top {
     background-color: #222;
 }
-.logo img {
-    width: auto;
-    height: 60px;
+.logo {
+    display: inline-block;
 }
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.logo .logo-first {
+    color: #fff;
+    border-right: 1px solid #4a4242;
+    padding-right: 8px;
+}
+.logo .logo-second {
+    color: #E22D1B;
+}
+
 .main-menu ul {
     margin-bottom: 0;
 }
@@ -412,12 +426,12 @@ img {
     font-weight: 700;
     margin-right: 10px;
 }
-.case-studies-box a svg {
+.case-studies-box a .fa-arrow-right {
     width: 16px;
     margin-left: 5px;
     transition: .3s ease;
 }
-.case-studies-box a:hover svg {
+.case-studies-box a:hover .fa-arrow-right {
     margin-left: 12px;
 }
 /* Pricing */
@@ -433,15 +447,12 @@ img {
     position: relative;
 }
 .pricing-box-text::after {
-    content: "";
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: #23ce6b;
     position: absolute;
-    top: 6px;
+    top: 0;
     left: 0;
-    background-image: url(../images/check-solid.svg);
-    background-size: 12px 12px;
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
 }
 .pricing-box-text {
     margin-left: 25px;
