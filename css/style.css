@@ -76,7 +76,7 @@ img {
     padding: 34px 0;
     text-decoration: none;
 }
-.main-menu ul li:hover > a {
+.main-menu ul li:hover > a, .main-menu ul li.active > a {
 	color: #e22d1b;
 }
 .main-menu ul li .submenu {

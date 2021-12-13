@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Header Area Start -->
-    <header class="header-top">
+    <header class="header-top sticky-top">
         <div class="header-area">
             <div class="container">
                 <div class="row align-items-center">
@@ -29,8 +29,8 @@
                         <div class="main-menu">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">pages</a>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#advertising">pages</a>
                                         <ul class="submenu">
                                             <li><a href="#">pages</a></li>
                                             <li><a href="#">feature</a></li>
@@ -65,7 +65,7 @@
     <main>
 
         <!-- Top Area -->
-        <section class="top-area pt-100 pb-100">
+        <section id="home" class="top-area pt-100 pb-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -473,7 +473,7 @@
         <!-- Campaign Area End -->
         
         <!-- Advertising Area Start -->
-        <section class="advertising-area pt-100 pb-100">
+        <section id="advertising" class="advertising-area pt-100 pb-100">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12 col-lg-6">
@@ -1012,6 +1012,7 @@
 
     <script src="js/jquery.min.3.6.0.js"></script>
     <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
         // var questionsItem = document.querySelector(".questions-item");
@@ -1027,6 +1028,12 @@
         $('#mobile-menu').meanmenu({
             meanMenuContainer: '.mobile-menu',
             meanScreenWidth: "992"
+        });
+        // One Page Nav
+        var top_offset = $('.header-area').height() - 10;
+        $('.main-menu nav ul').onePageNav({
+            currentClass: 'active',
+            scrollOffset: top_offset,
         });
     </script>
 </body>
