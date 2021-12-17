@@ -50,6 +50,19 @@ img {
     margin-left: 20px;
 }
 
+.bg-1 {
+    background: #E5F0FC;
+}
+.bg-2 {
+    background: #F8F6F6;
+}
+.bg-3 {
+    background: #92B4D0;
+}
+.bg-4 {
+    background: #E2E2E2;
+}
+
 /* Header */
 .header-top {
     background-color: #222;
@@ -708,6 +721,7 @@ img {
 }
 .message-btn {
     color: #e22d1b;
+    border: 2px solid #fff;
     cursor: pointer;
     font-size: 14px;
     padding: 8px 20px;
