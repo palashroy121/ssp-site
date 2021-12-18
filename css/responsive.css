@@ -18,8 +18,9 @@
     }
 
     .mean-container a.meanmenu-reveal {
-        border: 1px solid #fff;
+        border: none;
         color: #fff;
+        padding: 8px 0px;
     }
     .mean-container a.meanmenu-reveal span {
         background: #fff none repeat scroll 0 0;
@@ -30,15 +31,23 @@
 /* small devices */
 @media (max-width: 767.98px) {
     .logo {
-        margin-top: 10px;
+        margin-top: 12px;
+    }
+    .logo a {
+        font-size: 18px;
+        letter-spacing: unset;
+    }
+    .logo .logo-first {
+        padding-right: 5px;
     }
     .mobile-menu {
         margin-top: -7px;
     }
 
     .mean-container a.meanmenu-reveal {
-        border: 1px solid #fff;
+        border: none;
         color: #fff;
+        padding: 8px 0px;
     }
     .mean-container a.meanmenu-reveal span {
         background: #fff none repeat scroll 0 0;
