@@ -51,7 +51,7 @@
         <!-- Top Area -->
         <section id="home" class="top-area pt-100 pb-100">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-lg-6">
                         <div class="top-left mb-4">
                             <h1 class="top-left-title"><span>65%</span> off Web Hosting</h1>
@@ -164,7 +164,7 @@
         <!-- Service Area End -->
 
         <!-- Campaign Area Start -->
-        <section class="campaign-area pt-100 pb-100 bg-2">
+        <section class="campaign-area pt-100 pb-100 bg-1">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-6 col-lg-6">
@@ -181,7 +181,7 @@
                             <p>A simple clipping path is a single path used to cut out round and rectangular images and pictures of other simple shapes. Simple clipping path is used for the images of products such as mobile phones, balls, boxes, t-shirts, eggs, spoons, etc.</p>
                         </div>
                         <div class="campaign-button">
-                            <a href="#" class="btn ass-btn">Book A Call</a>
+                            <h2 class="top-left-price"><sup>$</sup>2.50<span>/Per Month!<sup>*</sup></span></h2>
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
         <!-- Expart Area Start -->
         <section class="expart-area pt-100 pb-100 bg-2">
             <div class="container">
-                <div class="row justify-content-between align-items-center">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-md-6 col-lg-6 mb-3">
                         <div class="section-title">
                             <!-- <span>Dedicated Campaign Manager</span> -->
@@ -202,10 +202,10 @@
                             <p>Images of relatively complex shapes are cut out using complex clipping paths. It is generally used for the images of headshots, some jewelry products, etc. For this kind of clipping path, the images can have embedded transparency.</p>
                         </div>
                         <div class="campaign-button">
-                            <a href="#" class="btn ass-btn">Book A Call</a>
+                            <h2 class="top-left-price"><sup>$</sup>2.50<span>/Per Month!<sup>*</sup></span></h2>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-6 col-lg-6 mb-3">
                         <div class="campaign-left">
                             <img src="images/complex-clipping-path.jpg" alt="">
                         </div>
@@ -218,13 +218,13 @@
         <!-- Campaign Area Start -->
         <section class="campaign-area pt-100 pb-100 bg-3">
             <div class="container">
-                <div class="row justify-content-between align-items-center">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-md-6 col-lg-6 mb-3">
                         <div class="campaign-left">
                             <img src="images/super-complex-clipping-path.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-6 col-lg-6 mb-3">
                         <div class="section-title">
                             <!-- <span>Campaign Dashboard</span> -->
                             <h2>Super Complex Path</h2>
@@ -233,7 +233,7 @@
                             <p>This kind of clipping path is used for images of more complex shapes when compared to complex clipping paths. Super complex clipping paths are applied for images that have multiple holes and complex edges. Masking technology is also used for such clipping paths. Examples of images where super complex clipping paths are used are flowers, art design, model, fence, tree, etc.</p>
                         </div>
                         <div class="campaign-button">
-                            <a href="#" class="btn ass-btn">Book A Call</a>
+                            <h2 class="top-left-price"><sup>$</sup>2.50<span>/Per Month!<sup>*</sup></span></h2>
                         </div>
                     </div>
                 </div>
@@ -244,7 +244,7 @@
         <!-- Landing Page Area Start -->
         <section class="landing-page-area pt-100 pb-100 bg-4">
             <div class="container">
-                <div class="row justify-content-between align-items-center">
+                <div class="row justify-content-center align-items-center">
                     <div class="col-md-6 col-lg-6 mb-3">
                         <div class="section-title">
                             <!-- <span>High-Converting Landing Pages</span> -->
@@ -254,10 +254,10 @@
                             <p>A compound clipping path is used for images with several objects. For example, group photos, photos of furniture sets, etc. require compound clipping paths. The cost for this kind of photo clipping is relatively high as there’s much more complexity involved than the previously mentioned clipping path types. This kind of work requires much more effort. Hence, the price is a bit higher.</p>
                         </div>
                         <div class="campaign-button">
-                            <a href="#" class="btn ass-btn">Book A Call</a>
+                            <h2 class="top-left-price"><sup>$</sup>2.50<span>/Per Month!<sup>*</sup></span></h2>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-6 col-lg-6 mb-3">
                         <div class="campaign-left">
                             <img src="images/compoud-clipping-path.jpg" alt="">
                         </div>
@@ -870,15 +870,17 @@
         // send email
         function sendEmail(){
             Email.send({
-                Host : "smtp.https://gmail.com",
-                Username : "palash.cmt@gmail.com",
-                Password : "10112203008*palash",
-                To : 'unixvalue@gmail.com',
+                Host : "smtp.g.com",
+                Username : "",
+                Password : "",
+                To : '',
                 From : document.getElementById("email").value,
-                Subject : "This is the subject",
-                Body : "And this is the body"
+                Subject : document.getElementById("subject").value,
+                Body : "Name: " + document.getElementById("name").value
+                        + "<br> Email: " + document.getElementById("email").value
+                        + "<br> Message: " + document.getElementById("message").value
             }).then(
-            message => alert(message)
+            message => alert("Message Sent Successfully.")
             );
         }
 
