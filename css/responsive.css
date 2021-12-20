@@ -53,6 +53,10 @@
         background: #fff none repeat scroll 0 0;
     }
 
+    .ass-btn-outline {
+        margin-bottom: 15px;
+    }
+
     /* Top Area */
     .top-area {
         padding-top: 20px;
