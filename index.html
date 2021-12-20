@@ -579,13 +579,13 @@
                             </div>
                             <div class="monthly-spend-amount d-flex">
                                 <small>$</small>
-                                <span>4000</span>
+                                <span id="rangeAmount">1,000</span>
                             </div>
                         </div>
 
                         <div class="range-box mt-4">
                             <div class="range">
-                                <input type="range" min="1000" max="50000" step="500" value="1000">
+                                <input type="range" id="range" min="1000" max="50000" step="500" value="1000">
                             </div>
                             <div class="range-labels d-flex justify-content-between">
                                 <span class="range-label">1,000</span>
@@ -609,7 +609,7 @@
                                 <div class="package-ad-spend d-flex justify-content-between">
                                     <span>Monthly Ad Spend</span>
                                     <div class="ad-spend">
-                                        $<span>1,000</span>
+                                        $<span id="rangePackage">1,000</span>
                                     </div>
                                 </div>
                             </div>
@@ -618,19 +618,19 @@
                                 <div class="package-mgmt-fee d-flex justify-content-between">
                                     <span>Monthly Mgmt Fee</span>
                                     <div class="mgmt-fee">
-                                        $<span>2,000</span>
+                                        $<span id="monthlyFee">500</span>
                                     </div>
                                 </div>
                                 <div class="package-setup-fee d-flex justify-content-between">
                                     <span>1-Time Setup Fee</span>
                                     <div class="setup-fee">
-                                        $<span>2,00</span>
+                                        $<span id="setupFee">200</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="package-calculate-footer d-flex justify-content-between">
                                 <p>Total</p>
-                                <div class="total">$<span>750</span></div>
+                                <div class="total">$<span id="total">700</span></div>
                             </div>
                         </div>
 
@@ -826,6 +826,56 @@
         // function questionsToggle(){
         //     questionsItem.classList.toggle("questions-open");
         // }
+
+        // Pricing Calculate
+        let formetNumber = (number) => {
+            let result = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number);
+            return result;
+        };
+
+        let rangeValue = document.querySelector('#range');
+        let rangeAmount = document.querySelector('#rangeAmount');
+        let rangePackage = document.querySelector('#rangePackage');
+        let monthlyFee = document.querySelector('#monthlyFee');
+        let setupFee = document.querySelector('#setupFee');
+        let total = document.querySelector('#total');
+
+        let monthlyAmount = 500;
+        let valueChecker = 1000;
+
+        rangeValue.addEventListener('input', function(){
+            let selectedAmount = rangeValue.value;
+            rangeAmount.innerText = formetNumber(selectedAmount);
+            rangePackage.innerText = formetNumber(selectedAmount);
+
+            if(valueChecker > selectedAmount) {
+                if(selectedAmount < 4000) {
+                    monthlyAmount = 500;
+                    monthlyFee.innerText = formetNumber(monthlyAmount);
+                } else if(selectedAmount < 8000) {
+                    monthlyAmount = 1000;
+                    monthlyFee.innerText = formetNumber(monthlyAmount);
+                } else if(selectedAmount < 12000) {
+                    monthlyAmount = 1500;
+                    monthlyFee.innerText = formetNumber(monthlyAmount);
+                }
+            } else {
+                if(selectedAmount >= 4000 && selectedAmount < 8000) {
+                    monthlyAmount = 1000;
+                    monthlyFee.innerText = formetNumber(monthlyAmount);
+                } else if(selectedAmount >= 8000 && selectedAmount < 12000) {
+                    monthlyAmount = 1500;
+                    monthlyFee.innerText = formetNumber(monthlyAmount);
+                } else if(selectedAmount >= 12000) {
+                    monthlyAmount = 2000;
+                    monthlyFee.innerText = formetNumber(monthlyAmount);
+                }
+            }
+            valueChecker = selectedAmount;
+
+            total.innerText = formetNumber(200 + monthlyAmount);
+
+        });
 
         // question toggle
         $(".questions-header").on("click", function() {
