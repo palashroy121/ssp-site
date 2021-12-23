@@ -348,6 +348,9 @@ img {
 }
 
 /* Campaign Area */
+.campaign-left img {
+    border-radius: 10px 30px;
+}
 .campaign-box {
     padding: 20px;
     border-radius: 4px;
