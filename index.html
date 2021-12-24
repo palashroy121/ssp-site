@@ -539,18 +539,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-between">
-                    <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-lg-9">
                         
                         <div class="package-title text-center">
                             Package Title
                         </div>
 
-                        <div class="row justify-content-center">
-                            <div class="col-sm-12 col-md-7">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
                                 <div class="package-box">
+                                    <div class="package-box-check"></div>
                                     <div class="package-box-title">
-                                        Full Lead Gen
+                                        Simple Path
                                     </div>
                                     <div class="package-box-boby">
                                         <p>Ad Spend: $1000+ / Month</p>
@@ -569,6 +570,55 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="col-sm-12 col-md-4">
+                                <div class="package-box">
+                                    <div class="package-box-check"></div>
+                                    <div class="package-box-title">
+                                        Complex Path
+                                    </div>
+                                    <div class="package-box-boby">
+                                        <p>Ad Spend: $1000+ / Month</p>
+                                        <p>Our all-in-one service to get form fill leads and calls.</p>
+                                    </div>
+                                    <div class="package-include">
+                                        <div class="package-include-head">
+                                            Includes
+                                        </div>
+                                        <ul>
+                                            <li>Complete Setup & Management</li>
+                                            <li>Customized Landing Pages</li>
+                                            <li>Remarketing Campaigns</li>
+                                            <li>Call-Only Campaigns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-4">
+                                <div class="package-box">
+                                    <div class="package-box-check"></div>
+                                    <div class="package-box-title">
+                                        Super Complex Path
+                                    </div>
+                                    <div class="package-box-boby">
+                                        <p>Ad Spend: $1000+ / Month</p>
+                                        <p>Our all-in-one service to get form fill leads and calls.</p>
+                                    </div>
+                                    <div class="package-include">
+                                        <div class="package-include-head">
+                                            Includes
+                                        </div>
+                                        <ul>
+                                            <li>Complete Setup & Management</li>
+                                            <li>Customized Landing Pages</li>
+                                            <li>Remarketing Campaigns</li>
+                                            <li>Call-Only Campaigns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div class="monthly-spend-box d-flex justify-content-between mt-5">
@@ -600,7 +650,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="package-calculate-box mb-3">
                             <div class="package-calculate-head">
                                 <div class="package-calculate-title">
@@ -823,10 +873,14 @@
     <script src="js/one-page-nav-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        // var questionsItem = document.querySelector(".questions-item");
-        // function questionsToggle(){
-        //     questionsItem.classList.toggle("questions-open");
-        // }
+        //Package active class add
+        // var packageAddClass = document.querySelector('.package-box');
+
+        // packageAddClass.classList.add("package-box-active");
+
+        $(document).on('click', '.package-box', function(){
+            $(this).addClass('package-box-active').sublinks().removeClass('package-box-active');
+        });
 
         // Pricing Calculate
         let formetNumber = (number) => {
