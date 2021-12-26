@@ -548,7 +548,7 @@
 
                         <div class="row">
                             <div class="col-sm-12 col-md-4">
-                                <div class="package-box">
+                                <div class="package-box" onclick="SimplePathActive()">
                                     <div class="package-box-check"></div>
                                     <div class="package-box-title">
                                         Simple Path
@@ -572,7 +572,7 @@
                             </div>
                             
                             <div class="col-sm-12 col-md-4">
-                                <div class="package-box">
+                                <div class="package-box" onclick="ComplexPathActive()">
                                     <div class="package-box-check"></div>
                                     <div class="package-box-title">
                                         Complex Path
@@ -596,7 +596,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-4">
-                                <div class="package-box">
+                                <div class="package-box" onclick="SuperComplexPathActive()">
                                     <div class="package-box-check"></div>
                                     <div class="package-box-title">
                                         Super Complex Path
@@ -874,14 +874,20 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         //Package active class add
-        // var packageAddClass = document.querySelector('.package-box');
+        var packageAddClass = document.querySelector('.package-box');
 
-        // packageAddClass.classList.add("package-box-active");
+        function SimplePathActive(){
+            packageAddClass.classList.add("package-box-active");
+        }
 
-        $(document).on('click', '.package-box', function(){
-            $(this).addClass('package-box-active').sublinks().removeClass('package-box-active');
-        });
+        function ComplexPathActive(){
+            packageAddClass.classList.add("package-box-active");
+        }
 
+        function SuperComplexPathActive(){
+            packageAddClass.classList.add("package-box-active");
+        }
+        
         // Pricing Calculate
         let formetNumber = (number) => {
             let result = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number);
