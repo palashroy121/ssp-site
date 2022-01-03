@@ -548,7 +548,7 @@
 
                         <div class="row">
                             <div class="col-sm-12 col-md-4">
-                                <div class="package-box" onclick="SimplePathActive()">
+                                <div class="package-box package-box-active" data-item="1">
                                     <div class="package-box-check"></div>
                                     <div class="package-box-title">
                                         Simple Path
@@ -572,7 +572,7 @@
                             </div>
                             
                             <div class="col-sm-12 col-md-4">
-                                <div class="package-box" onclick="ComplexPathActive()">
+                                <div class="package-box" data-item="2">
                                     <div class="package-box-check"></div>
                                     <div class="package-box-title">
                                         Complex Path
@@ -596,7 +596,7 @@
                             </div>
 
                             <div class="col-sm-12 col-md-4">
-                                <div class="package-box" onclick="SuperComplexPathActive()">
+                                <div class="package-box" data-item="3">
                                     <div class="package-box-check"></div>
                                     <div class="package-box-title">
                                         Super Complex Path
@@ -873,27 +873,6 @@
     <script src="js/one-page-nav-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        //Package active class add
-        var packageAddClass = document.querySelector('.package-box');
-
-        function SimplePathActive(){
-            packageAddClass.classList.add("package-box-active");
-        }
-
-        function ComplexPathActive(){
-            packageAddClass.classList.add("package-box-active");
-        }
-
-        function SuperComplexPathActive(){
-            packageAddClass.classList.add("package-box-active");
-        }
-        
-        // Pricing Calculate
-        let formetNumber = (number) => {
-            let result = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number);
-            return result;
-        };
-
         let rangeValue = document.querySelector('#range');
         let rangeAmount = document.querySelector('#rangeAmount');
         let rangePackage = document.querySelector('#rangePackage');
@@ -901,23 +880,67 @@
         let setupFee = document.querySelector('#setupFee');
         let total = document.querySelector('#total');
 
+
+        //Package active class add
+        let packageAddClass = document.querySelectorAll('.package-box');
+        let selectedItemPackage = 1;
+        // console.log(packageAddClass);
+
+        packageAddClass.forEach(function(item){
+            item.addEventListener('click', function(){
+                packageAddClass.forEach(function(item){
+                    item.classList.remove('package-box-active');
+                });
+
+                item.classList.add('package-box-active');
+                
+                selectedItemPackage = item.getAttribute('data-item');
+                rangeValue.value = 1000;
+            });
+
+        });
+        
+        // Pricing Calculate
+        let formetNumber = (number) => {
+            let result = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number);
+            return result;
+        };
+
         let monthlyAmount = 500;
         let valueChecker = 1000;
 
-        rangeValue.addEventListener('input', function(){
+        rangeValue.addEventListener('change', function(){
             let selectedAmount = rangeValue.value;
             rangeAmount.innerText = formetNumber(selectedAmount);
             rangePackage.innerText = formetNumber(selectedAmount);
-
+            console.log(selectedItemPackage);
             if(valueChecker > selectedAmount) {
                 if(selectedAmount < 4000) {
-                    monthlyAmount = 500;
+                    if(selectedItemPackage == 1) {
+                        monthlyAmount = 500;
+                    }else if(selectedItemPackage == 2) {
+                        monthlyAmount = 700;
+                    }else {
+                        monthlyAmount = 1000;
+                    }
                     monthlyFee.innerText = formetNumber(monthlyAmount);
                 } else if(selectedAmount < 8000) {
-                    monthlyAmount = 1000;
+                    if(selectedItemPackage == 1) {
+                        monthlyAmount = 1000;
+                    }else if(selectedItemPackage == 2) {
+                        monthlyAmount = 1400;
+                    }else {
+                        monthlyAmount = 2000;
+                    }
                     monthlyFee.innerText = formetNumber(monthlyAmount);
                 } else if(selectedAmount < 12000) {
-                    monthlyAmount = 1500;
+                    if(selectedItemPackage == 1) {
+                        monthlyAmount = 1500;
+                    }else if(selectedItemPackage == 2) {
+                        monthlyAmount = 2100;
+                    }else {
+                        monthlyAmount = 3000;
+                    }
                     monthlyFee.innerText = formetNumber(monthlyAmount);
                 }
             } else {
