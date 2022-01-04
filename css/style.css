@@ -572,11 +572,11 @@ img {
     font-weight: 700;
     margin-bottom: 10px;
 }
-.package-ad-spend span, .package-mgmt-fee span, .package-setup-fee span {
+.package-ad-spend span, .package-management-fee span, .package-setup-fee span {
     font-size: 14px;
     font-weight: normal;
 }
-.ad-spend, .ad-spend span, .mgmt-fee, .mgmt-fee span, .setup-fee, .setup-fee span {
+.ad-spend, .ad-spend span, .management-fee, .management-fee span, .setup-fee, .setup-fee span {
     font-weight: 600;
 }
 .package-calculate-footer p {
