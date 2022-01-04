@@ -33,9 +33,9 @@
                                 <ul>    
                                     <li><a href="#home">Pricing</a></li>
                                     <li><a href="#advertising">Portfolio</a></li>
-                                    <li><a href="#">How IT Works</a></li>
-                                    <li><a href="#">Free Trial</a></li>
-                                    <li><a href="#">About ICON HEAL</a></li>
+                                    <li><a href="/">How IT Works</a></li>
+                                    <li><a href="/">Free Trial</a></li>
+                                    <li><a href="/">About ICON HEAL</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -630,7 +630,7 @@
                             </div>
                             <div class="monthly-spend-amount d-flex">
                                 <small>$</small>
-                                <span id="rangeAmount">1,000</span>
+                                <span id="rangeValue">1,000</span>
                             </div>
                         </div>
 
@@ -650,38 +650,42 @@
                         </div>
 
                     </div>
+
                     <div class="col-lg-3">
                         <div class="package-calculate-box mb-3">
                             <div class="package-calculate-head">
                                 <div class="package-calculate-title">
-                                    Full Lead Gen PPC
+                                    Simple Path
                                 </div>
                                 <span>Paid to Google</span>
                                 <div class="package-ad-spend d-flex justify-content-between">
                                     <span>Monthly Ad Spend</span>
                                     <div class="ad-spend">
-                                        $<span id="rangePackage">1,000</span>
+                                        $<span id="base-amount"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="package-calculate-body">
-                                <span>Paid to The HOTH</span>
-                                <div class="package-mgmt-fee d-flex justify-content-between">
-                                    <span>Monthly Mgmt Fee</span>
-                                    <div class="mgmt-fee">
-                                        $<span id="monthlyFee">500</span>
+                                <span>Pay us</span>
+
+                                <div class="package-management-fee d-flex justify-content-between">
+                                    <span>Monthly Management Fee</span>
+                                    <div class="management-fee">
+                                        $<span id="management-amount"></span>
                                     </div>
                                 </div>
+
                                 <div class="package-setup-fee d-flex justify-content-between">
                                     <span>1-Time Setup Fee</span>
                                     <div class="setup-fee">
-                                        $<span id="setupFee">200</span>
+                                        $<span id="setup-amount"></span>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="package-calculate-footer d-flex justify-content-between">
                                 <p>Total</p>
-                                <div class="total">$<span id="total">700</span></div>
+                                <div class="total">$<span id="total-amount"></span></div>
                             </div>
                         </div>
 
@@ -872,93 +876,130 @@
     <script src="js/jquery.meanmenu.min.js"></script>
     <script src="js/one-page-nav-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
     <script>
-        let rangeValue = document.querySelector('#range');
-        let rangeAmount = document.querySelector('#rangeAmount');
-        let rangePackage = document.querySelector('#rangePackage');
-        let monthlyFee = document.querySelector('#monthlyFee');
-        let setupFee = document.querySelector('#setupFee');
-        let total = document.querySelector('#total');
+        // variables
+        let rangeInputItem = document.querySelector('#range');
+        let rangeValueItem = document.querySelector('#rangeValue');
+        let baseAmountItem = document.querySelector('#base-amount');
+        let managementAmountItem = document.querySelector('#management-amount');
+        let setupAmountItem = document.querySelector('#setup-amount');
+        let totalAmoutItem = document.querySelector('#total-amount');
 
+        let packageTitle = document.querySelector('.package-calculate-title');
+        let packageBoxItems = document.querySelectorAll('.package-box');
 
-        //Package active class add
-        let packageAddClass = document.querySelectorAll('.package-box');
-        let selectedItemPackage = 1;
-        // console.log(packageAddClass);
+        let selectedPackageItem = 1;
+        let baseAmount = 1000;
+        // end of variables
 
-        packageAddClass.forEach(function(item){
+        // functions
+        let formatNumber = (number) => {
+            return new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number);
+        };
+
+        let priceValueChanger = (baseAmount, managementAmount, setupAmount) => {
+            baseAmountItem.innerText = formatNumber(baseAmount);
+            managementAmountItem.innerText = formatNumber(managementAmount);
+            setupAmountItem.innerText = formatNumber(setupAmount);
+
+            totalAmoutItem.innerText = formatNumber(managementAmount + setupAmount);
+        };
+
+        let priceChecker = (selectedPackageItem, selectedAmount) => {
+            switch(true) {
+                case (selectedAmount < 4000):
+                    switch(selectedPackageItem) {
+                        case 1:
+                            priceValueChanger(selectedAmount, 500, 200);
+                            break;
+                        case 2:
+                            priceValueChanger(selectedAmount, 700, 300);
+                            break;
+                        case 3:
+                            priceValueChanger(selectedAmount, 900, 400);
+                    }
+                    break;
+                case (selectedAmount >= 4000 && selectedAmount < 8000):
+                    switch(selectedPackageItem) {
+                        case 1:
+                            priceValueChanger(selectedAmount, 1000, 200);
+                            break;
+                        case 2:
+                            priceValueChanger(selectedAmount, 1400, 300);
+                            break;
+                        case 3:
+                            priceValueChanger(selectedAmount, 1600, 400);
+                            break;
+                    }
+                    break;
+
+                case (selectedAmount >= 8000 && selectedAmount < 12000):
+                    switch(selectedPackageItem) {
+                        case 1:
+                            priceValueChanger(selectedAmount, 1500, 200);
+                            break;
+                        case 2:
+                            priceValueChanger(selectedAmount, 2100, 300);
+                            break;
+                        case 3:
+                            priceValueChanger(selectedAmount, 2300, 400);
+                    }
+                    break;
+
+                case (selectedAmount >= 12000 && selectedAmount < 16000):
+                    switch(selectedPackageItem) {
+                        case 1:
+                            priceValueChanger(selectedAmount, 2000, 200);
+                            break;
+                        case 2:
+                            priceValueChanger(selectedAmount, 2800, 300);
+                            break;
+                        case 3:
+                            priceValueChanger(selectedAmount, 3000, 400);
+                    }
+                    break;
+
+                case (selectedAmount >= 16000):
+                    switch(selectedPackageItem) {
+                        case 1:
+                            priceValueChanger(selectedAmount, 2500, 200);
+                            break;
+                        case 2:
+                            priceValueChanger(selectedAmount, 3500, 300);
+                            break;
+                        case 3:
+                            priceValueChanger(selectedAmount, 3700, 400);
+                    }
+                    break;
+            }
+        };
+        // end of functions
+
+        priceValueChanger(baseAmount, 500, 200);
+
+        packageBoxItems.forEach(function(item){
             item.addEventListener('click', function(){
-                packageAddClass.forEach(function(item){
+                packageBoxItems.forEach(function(item){
                     item.classList.remove('package-box-active');
                 });
-
                 item.classList.add('package-box-active');
+
+                rangeInputItem.value = baseAmount;
+                packageTitle.innerText = item.querySelector('.package-box-title').innerText;
+
+                selectedPackageItem = parseInt(item.getAttribute('data-item'));
                 
-                selectedItemPackage = item.getAttribute('data-item');
-                rangeValue.value = 1000;
+                priceChecker(selectedPackageItem, baseAmount);
             });
 
         });
-        
-        // Pricing Calculate
-        let formetNumber = (number) => {
-            let result = new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number);
-            return result;
-        };
 
-        let monthlyAmount = 500;
-        let valueChecker = 1000;
+        rangeInputItem.addEventListener('input', function(){
+            let selectedAmount = rangeInputItem.value;
+            rangeValueItem.innerText = formatNumber(selectedAmount);
 
-        rangeValue.addEventListener('change', function(){
-            let selectedAmount = rangeValue.value;
-            rangeAmount.innerText = formetNumber(selectedAmount);
-            rangePackage.innerText = formetNumber(selectedAmount);
-            console.log(selectedItemPackage);
-            if(valueChecker > selectedAmount) {
-                if(selectedAmount < 4000) {
-                    if(selectedItemPackage == 1) {
-                        monthlyAmount = 500;
-                    }else if(selectedItemPackage == 2) {
-                        monthlyAmount = 700;
-                    }else {
-                        monthlyAmount = 1000;
-                    }
-                    monthlyFee.innerText = formetNumber(monthlyAmount);
-                } else if(selectedAmount < 8000) {
-                    if(selectedItemPackage == 1) {
-                        monthlyAmount = 1000;
-                    }else if(selectedItemPackage == 2) {
-                        monthlyAmount = 1400;
-                    }else {
-                        monthlyAmount = 2000;
-                    }
-                    monthlyFee.innerText = formetNumber(monthlyAmount);
-                } else if(selectedAmount < 12000) {
-                    if(selectedItemPackage == 1) {
-                        monthlyAmount = 1500;
-                    }else if(selectedItemPackage == 2) {
-                        monthlyAmount = 2100;
-                    }else {
-                        monthlyAmount = 3000;
-                    }
-                    monthlyFee.innerText = formetNumber(monthlyAmount);
-                }
-            } else {
-                if(selectedAmount >= 4000 && selectedAmount < 8000) {
-                    monthlyAmount = 1000;
-                    monthlyFee.innerText = formetNumber(monthlyAmount);
-                } else if(selectedAmount >= 8000 && selectedAmount < 12000) {
-                    monthlyAmount = 1500;
-                    monthlyFee.innerText = formetNumber(monthlyAmount);
-                } else if(selectedAmount >= 12000) {
-                    monthlyAmount = 2000;
-                    monthlyFee.innerText = formetNumber(monthlyAmount);
-                }
-            }
-            valueChecker = selectedAmount;
-
-            total.innerText = formetNumber(200 + monthlyAmount);
-
+            priceChecker(selectedPackageItem, selectedAmount);
         });
 
         // question toggle
