@@ -809,3 +809,46 @@ img {
     line-height: 25px;
     margin: 0 5px;
 }
+
+/* Index New */
+/* Hero Area */
+.carousel-control-prev, .carousel-control-next {
+    width: unset;
+}
+.carousel-control-prev .fa, .carousel-control-next .fa {
+    background-color: rgba(0, 0, 0, 0.32);
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    color: #fff;
+}
+.carousel-control-prev .fa {
+    border-radius: 0 5px 5px 0;
+}
+.carousel-control-next .fa {
+    border-radius: 5px 0 0 5px;
+}
+
+/* Content Area */
+.section-title h2 {
+    color: #1a1a1a;
+    font-size: 44px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+.section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+/* Table Area */
+.table>thead {
+    border-top: 3px solid #0078CF;
+    background: rgba(25,170,248,0.06);
+}
+.table thead tr th, .table tbody tr td {
+    padding: 20px 15px;
+}
