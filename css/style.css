@@ -913,3 +913,31 @@ img {
     display: inline-block;
     right: 21px;
 }
+
+/* msg area */
+.msg-box {
+    padding: 25px 20px;
+    background: #021A4A;
+}
+.msg-box .msg-left-title {
+    color: #fff;
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #fff;
+}
+.msg-box .msg-left-con h4 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.3;
+}
+.msg-box .msg-left-con p {
+    color: #fff;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.form-box .form-check {
+    display: inline-block;
+}
