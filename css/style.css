@@ -941,3 +941,6 @@ img {
 .form-box .form-check {
     display: inline-block;
 }
+.form-box .form-check .form-check-label {
+    margin-right: 5px;
+}

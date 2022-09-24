@@ -203,7 +203,7 @@
                     <h2>Are you a GP Subscriber Visiting Outside</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 mb-3 d-flex">
                         <div class="msg-box">
                             <div class="msg-left-title">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -218,14 +218,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-flex">
                         <div class="form-box">
-                            <form action="#">
+                            <form action="mail.php" method="post">
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <label for="name" class="form-label">Select Service</label>
-                                        <select class="form-select">
-                                            <option selected>Open this select menu</option>
+                                        <select class="form-select" name="service">
+                                            <option value="0" selected>Open this select menu</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
@@ -234,20 +234,20 @@
 
                                     <div class="col-md-6 mb-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imagetype" id="imagetype1">
+                                            <label class="form-check-label" for="imagetype1">
                                               JPEG
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                            <label class="form-check-label" for="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="imagetype" id="imagetype2">
+                                            <label class="form-check-label" for="imagetype2">
                                               PNG
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                            <label class="form-check-label" for="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="imagetype" id="imagetype3">
+                                            <label class="form-check-label" for="imagetype3">
                                               PSD
                                             </label>
                                         </div>
@@ -255,14 +255,14 @@
 
                                     <div class="col-md-6 mb-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" checked>
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imagepath" id="imagepath1">
+                                            <label class="form-check-label" for="imagepath1">
                                               Include Path
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imagepath" id="imagepath2">
+                                            <label class="form-check-label" for="imagepath2">
                                               No Path
                                             </label>
                                         </div>
@@ -270,20 +270,20 @@
 
                                     <div class="col-md-6 mb-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" checked>
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imageshadow" id="imageshadow1">
+                                            <label class="form-check-label" for="imageshadow1">
                                                 Drop Shadow
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imageshadow" id="imageshadow2">
+                                            <label class="form-check-label" for="imageshadow2">
                                                 Reflection Shadow
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imageshadow" id="imageshadow3">
+                                            <label class="form-check-label" for="imageshadow3">
                                               No Shadow
                                             </label>
                                         </div>
@@ -291,14 +291,14 @@
 
                                     <div class="col-md-6 mb-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" checked>
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imagesize" id="imagesize1">
+                                            <label class="form-check-label" for="imagesize1">
                                               Resize for web
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <input class="form-check-input" type="radio" name="imagesize" id="imagesize2">
+                                            <label class="form-check-label" for="imagesize2">
                                               Original size
                                             </label>
                                         </div>
@@ -306,22 +306,22 @@
 
                                     <div class="col-md-6 mb-3">
                                         <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name">
                                     </div>
                                     
                                     <div class="col-md-6 mb-3">
-                                        <label for="name" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
                                     </div>
                                     
                                     <div class="col-md-6 mb-3">
-                                        <label for="name" class="form-label">Phone Number</label>
-                                        <input type="email" class="form-control" id="name" placeholder="Enter your phone">
+                                        <label for="number" class="form-label">Phone Number</label>
+                                        <input type="text" name="number" class="form-control" id="number" placeholder="Enter your phone">
                                     </div>
                                     
                                     <div class="col-md-6 mb-3">
                                         <label for="country" class="form-label">Country</label>
-                                        <select class="form-select" id="country">
+                                        <select name="country" class="form-select" id="country">
                                             <option selected>--Select--</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
@@ -330,23 +330,23 @@
                                     </div>
                                     
                                     <div class="col-md-6 mb-3">
-                                        <label for="imageLink" class="form-label">Image Link</label>
-                                        <input type="email" class="form-control" id="imageLink" placeholder="Past your images link">
+                                        <label for="imagelink" class="form-label">Image Link</label>
+                                        <input type="text" name="imagelink" class="form-control" id="imagelink" placeholder="Past your images link">
                                     </div>
                                     
                                     <div class="col-md-6 mb-3">
-                                        <label for="name" class="form-label">Upload Your Photos</label>
-                                        <input type="email" class="form-control" id="name" placeholder="name@example.com">
+                                        <label for="Photos" class="form-label">Upload Your Photos</label>
+                                        <input type="text" name="photos" class="form-control" id="Photos" placeholder="Photos">
                                     </div>
                                     
                                     <div class="col-md-12 mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea name="message" class="form-control" id="message" rows="3"></textarea>
                                     </div>
 
                                     <div class="col-md-12 mb-3">
                                         <div class="submit-btn">
-                                            <button class="btn">Submit</button>
+                                            <button class="btn" type="submit">Submit</button>
                                         </div>
                                     </div>
 
